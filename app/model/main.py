@@ -38,7 +38,7 @@ def get_users() -> None:
     r = requests.get('https://rickandmortyapi.com/api/character?page=1', params=query).json()
     user = dict()
 
-    #TODO: salve os dados coletados em um banco de dados cm o nome de user.db
+    #TODO: salve os dados coletados em um banco de dados com o nome de user.db
     r = r['results']
     for item in r:
         user = {'id': item['id'], 'nome': item['name']}
